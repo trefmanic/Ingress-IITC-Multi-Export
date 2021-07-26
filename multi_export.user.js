@@ -2,7 +2,7 @@
 // @id              iitc-plugin-portal-multi-export
 // @name            IITC plugin: Portal Multi Export
 // @category        Misc
-// @version         0.11
+// @version         0.11.b
 // @namespace       https://github.com/jonatkins/ingress-intel-total-conversion
 // @updateURL       https://iitc.aradiv.de/plugin/37/multi_export.meta.js
 // @downloadURL     https://iitc.aradiv.de/plugin/37/multi_export.user.js
@@ -175,8 +175,16 @@ function wrapper(plugin_info) {
                     }
                 }
 
-                if(plugin.keys){
-                    keys = plugin.keys.keys[i];
+                // Search for keys in LiveInventory
+                if(plugin.LiveInventory){
+                    var searchPortal = plugin.LiveInventory.keyCount.find(function(post, index) {
+                        if(post.portalCoupler.portalGuid == i)
+                            return true;
+                    });
+                    if (searchPortal) {
+                        keys = searchPortal.count;
+                    }else{
+                        keys = 0}
                 }
                 var b = window.map.getBounds();
                 // skip if not currently visible
