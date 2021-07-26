@@ -16,6 +16,6 @@ Additionally the "Bookmarks for maps and portals" and "Keys" plugin are needed f
 ## Install
 For installation just click on this link:
 
-https://github.com/modkin/Ingress-IITC-Multi-Export/raw/master/multi_export.user.js
+https://github.com/trefmanic/Ingress-IITC-Multi-Export/raw/master/multi_export.user.js
 
 Normally Tampermonkey (or the extension you are using for JS) should recognize the format and ask to install the plugin
