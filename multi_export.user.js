@@ -174,7 +174,7 @@ function wrapper(plugin_info) {
                         continue;
                     }
                 }
-
+		// TODO: This works. Write a way to select LiveInventory specifically 
                 // Search for keys in LiveInventory
                 if(plugin.LiveInventory){
                     var searchPortal = plugin.LiveInventory.keyCount.find(function(post, index) {
